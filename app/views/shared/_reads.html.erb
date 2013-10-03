@@ -1,0 +1,6 @@
+<ol>
+	<%@reads.each do |read|%>
+		<li><%=link_to read.title,article_path(read)%>
+		</li>
+	<%end%>
+</ol>

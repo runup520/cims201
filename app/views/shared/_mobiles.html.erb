@@ -1,0 +1,6 @@
+<ol>
+	<%@mobiles.each do |mobile|%>
+		<li><%=link_to mobile.title,article_path(mobile)%>
+		</li>
+	<%end%>
+</ol>

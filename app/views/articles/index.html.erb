@@ -1,0 +1,26 @@
+ <% provide(:title,'用户发表知识')%>
+ 
+<div class="row">
+    <div class="span10">
+    <%= render 'shared/top' %>
+        <div class="row">              
+            <div class="span10">
+               <div>
+                <section>
+                  <%= render 'shared/article_success' %>
+			      <%= render 'shared/publish_article' %>
+			      <%= render 'shared/user_publish_articles' %>
+			    </section>
+			    </div>
+
+            </div>
+        </div>   
+    </div>
+    
+    <div class="span2">
+	    <%= render 'shared/personal' %>	
+        <%= render 'shared/information' %>	              
+	    <%= render 'shared/search' %>	       
+    </div> 
+</div>
+

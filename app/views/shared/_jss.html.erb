@@ -1,0 +1,6 @@
+<ul>
+<%@jss.each do |js|%>
+	<li><%=link_to js.title,article_path(js)%></br>
+		<%=js.content%></li>
+<%end%>
+</ul>

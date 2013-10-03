@@ -1,0 +1,9 @@
+<section>
+   <table class="table table-striped">
+    <%@funs.each do |fun|%>
+	<tr>
+		   <td><strong>·&nbsp;</strong><%= link_to fun.title,article_path(fun)%></td> 
+	</tr>
+	<%end%>
+   </table>
+</section>

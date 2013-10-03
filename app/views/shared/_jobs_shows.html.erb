@@ -1,0 +1,6 @@
+<ol>
+	<%@job_shows.each do |job_show|%>
+		<li><%=link_to job_show.title,article_path(job_show)%>
+		</li>
+	<%end%>
+</ol>

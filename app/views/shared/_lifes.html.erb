@@ -1,0 +1,6 @@
+<ol>
+	<%@lifes.each do |life|%>
+		<li><%=link_to life.title,article_path(life)%>
+		</li>
+	<%end%>
+</ol>

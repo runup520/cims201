@@ -1,0 +1,13 @@
+
+
+<section>
+	<hr>
+	
+	<%= form_tag searchresult_path, :method => :get do %>
+		<p>
+		     <%= text_field_tag :search, params[:search],:class=>'textbg' %></br>
+		     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= submit_tag "站内搜索", :title => nil,class: "place btn btn-large btn-primary" %>
+		</p>
+	<% end %>
+	<hr>
+</section>

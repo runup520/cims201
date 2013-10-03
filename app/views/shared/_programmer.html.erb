@@ -1,0 +1,9 @@
+<section>
+   <table class="table table-striped">
+    <%@programmers.each do |programmer|%>
+	<tr>
+		   <td><strong>·&nbsp;</strong><%= link_to programmer.title,article_path(programmer)%></td> 
+	</tr>
+	<%end%>
+   </table>
+</section>

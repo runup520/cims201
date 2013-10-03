@@ -1,0 +1,15 @@
+ <section>
+ 	  <% if @articles_results.empty? %>
+      <p align="center"><font color="337FE5">对不起，没有搜索到您要文章！</font></p>
+      <% else %>
+	    <ul>
+	    	<p align="center"><font color="337FE5">找到<%=@articles_results.count%>篇文章！</font></p>
+		    <%@articles_results.each do |result|%>
+				<p><strong><font><%=link_to result.title,article_path(result)%></strong></font></p></br>
+				<%=raw result.content%>
+			<hr>				
+		    <%end%>	   
+	    </ul>
+	  <%end%>
+    
+<section>

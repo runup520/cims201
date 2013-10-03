@@ -1,0 +1,13 @@
+ <%= form_for(@critic) do |f| %>
+  <div>
+      <p>
+         <small>输入您的评论评论:</small> <%= f.kindeditor :content, :width => 600, :height => 300, :langType => 'en' %> 
+      </p>
+  </div>
+  
+         <%= hidden_field_tag(:article_id, @article.id) %>
+  
+  <div class="actions">
+         <%= f.submit  :评论提交, class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>  

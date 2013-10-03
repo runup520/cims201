@@ -1,0 +1,38 @@
+<div>
+    <hr>
+    读者评论:
+    <% @critics.each do |critic| %>
+              
+    <table>
+        <tr>
+          <td rowspan="2" width="25%"> <img src="../assets/article.png"></td>
+          <%@critic_user=User.find(critic.user_id)%>
+          <td><p><small>用户名称:<%=@critic_user.name%></small></p></td>
+        </tr>
+
+        <tr>
+          <td><p><small>评论时间:<%=critic.created_at%></small></p></td>
+        </tr>
+        
+        <% if signed_in? %>
+        <% if current_user.admin? %>
+        <tr>
+            <td rowspan="2"><p><small>
+            <%= link_to '删除',[critic.article,critic],:confirm=>'确定删除？',
+            :method=>:delete %>
+
+            </small></p></td>
+        </tr>
+        <%end%>
+        <%end%>
+
+        <hr>
+
+    </table>
+          
+    <p>
+        &nbsp;&nbsp;&nbsp;<%=raw critic.content %>
+    </p>
+
+    <% end %>
+</div>

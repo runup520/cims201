@@ -1,0 +1,29 @@
+<p align="center"><strong>更新资料</strong></p>
+
+<div class="row">
+  <div class="span3">
+    &nbsp;
+  </div>
+  <div class="span4">
+  <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :姓名 %>
+      <%= f.text_field :name %>
+
+      <%= f.label :邮件 %>
+      <%= f.text_field :email %>
+
+      <%= f.label :密码 %>
+      <%= f.password_field :password %>
+
+      <%= f.label :密码确认 %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "确认更新", class: "btn btn-large btn-primary" %>
+    <% end %> 
+  </div>
+  <div class="span3">
+    &nbsp;
+  </div>
+</div>

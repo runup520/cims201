@@ -1,0 +1,12 @@
+<section>
+   <table class="table table-striped">
+    <%@works.each do |work|%>
+	<tr>
+		   <td><strong>·&nbsp;</strong><%= link_to work.title,article_path(work)%></td> 
+	</tr>
+	<%end%>
+   </table>
+</section>
+
+
+   

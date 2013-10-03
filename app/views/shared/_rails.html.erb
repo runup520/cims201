@@ -1,0 +1,6 @@
+
+<ol>
+<%@rails.each do |rail|%>
+	<li><%=link_to rail.title,article_path(rail)%></li>
+<%end%>
+</ol>

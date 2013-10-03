@@ -1,0 +1,6 @@
+<ol>
+	<%@logics.each do |logic|%>
+		<li><%=link_to logic.title,article_path(logic)%>
+		</li>
+	<%end%>
+</ol>

@@ -1,0 +1,6 @@
+<ol>
+	<%@rubys.each do |ruby|%>
+		<li><%=link_to ruby.title,article_path(ruby)%>
+		</li>
+	<%end%>
+</ol>

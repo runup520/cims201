@@ -1,0 +1,33 @@
+ <% provide(:title,@article.title)%>
+
+
+ <div class="row">
+    <div class="span10">
+        <%= render 'shared/top' %>
+		    <%= render 'shared/article' %>
+              
+        <%=render'shared/critics'%>
+        <% if signed_in? %>
+              <%@user = User.find(current_user)%>
+              <%@critic = @article.critics.build(:user_id=>@current_user.id)%>
+              <%=render'shared/critic'%>                                     
+        <% else %>
+              </br>
+              <p align="center"><font color="337FE5"><strong>对不起，您目前是游客，请登录参与评论</strong></font></p> 
+        <% end %> 
+    </div>
+
+    <div class="span2">
+         <%= render 'shared/personal' %>    
+         <%= render 'shared/information' %>                
+         <%= render 'shared/search' %>	
+    </div>      
+</div>
+
+
+
+
+
+
+
+

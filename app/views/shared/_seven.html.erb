@@ -1,0 +1,13 @@
+<section>
+	
+<table class="table table-striped">
+	
+	<%@sevens.each do |seven|%>
+	    <tr>
+	    	<td width="70%"><strong>·&nbsp;</strong><%=link_to seven.title,article_path(seven)%></td>
+	    </tr>
+
+	<%end%>
+
+</table>
+</section>

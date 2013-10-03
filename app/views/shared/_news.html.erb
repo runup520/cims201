@@ -1,0 +1,10 @@
+<section>
+   <table class="table table-striped">
+    <%@news.each do |new|%>
+	<tr>
+		   <td><strong>·&nbsp;</strong><%= link_to new.title,article_path(new)%></td> 
+	</tr>
+	<%end%>
+   </table>
+</section>
+

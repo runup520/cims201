@@ -1,0 +1,37 @@
+<style type="text/css">
+  .textbg3{width:40%;}
+  .textbg4{width:40%;
+    height: 40px
+  }
+</style>
+
+<%= render 'shared/article_success' %>
+<% provide(:title, "发布文章") %>
+<div class="span8">
+<%= form_for(@article) do |f| %>
+  <%= render 'shared/errors_article', object: f.object%>
+  <p>      
+      <small>题目: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</small></br><%= f.text_field :title ,:class=>'textbg3'%>
+  </p>
+
+
+  <p>      
+      <small>标签: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</small></br> <%= f.select :tag, [['走七活动'],['就业信息'],['编程学习'],['生活娱乐'],['新生问答'], ['老生资源']],{},:class=>'textbg4' %>
+  </p>
+
+
+   <p>
+      <small>内容:</small> <%= f.kindeditor :content, :width => 400, :height => 400, :langType => 'en' %> 
+   </p>
+  
+  <div class="actions">
+    <%= f.submit  :提交 , class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>
+</div>
+
+
+
+ 
+
+

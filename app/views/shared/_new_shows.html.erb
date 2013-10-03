@@ -1,0 +1,8 @@
+ 
+<ol>
+	<%@new_shows.each do |new_show|%>
+		<li><%=link_to new_show.title,article_path(new_show)%>
+		</li>
+	<%end%>
+</ol>
+<%=paginate @new_shows, :theme => 'twitter-bootstrap' %>   

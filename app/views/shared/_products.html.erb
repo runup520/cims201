@@ -1,0 +1,6 @@
+<ol>
+	<%@products.each do |product|%>
+		<li><%=link_to product.title,article_path(product)%>
+		</li>
+	<%end%>
+</ol>

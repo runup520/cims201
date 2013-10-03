@@ -1,0 +1,6 @@
+<ol>
+	<%@ecommerces.each do |ecommerce|%>
+		<li><%=link_to ecommerce.title,article_path(ecommerce)%>
+		</li>
+	<%end%>
+</ol>

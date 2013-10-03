@@ -1,0 +1,45 @@
+<style type="text/css">
+  .textbg7{width:40%;}
+  .textbg8{width:40%;
+    height: 40px
+  }
+</style>
+
+
+<div class="row">
+    <aside class="span4">
+     
+      <section>
+        用户名：
+        <%=@user.name%></br>
+        <%=@user.email%>
+      </section>
+    </aside> 
+
+    <div class="span8">
+      <p align="center"><strong>知识编辑</strong></p>
+      <%= form_for(@article) do |f| %>
+
+      <p>      
+        <small>题目: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</small></br><%= f.text_field :title ,:class=>'textbg7'%>
+      </p>
+
+
+      <p>      
+        <small>标签: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</small></br> <%= f.select :tag, [['走七活动'],['就业信息'],['编程学习'],['生活娱乐'],['新生问答'], ['老生资源']],{},:class=>'textbg8' %>
+      </p>
+
+
+     <p>
+        <small>内容:</small> <%= f.kindeditor :content, :width => 400, :height => 400, :langType => 'en' %> 
+     </p>
+
+      <div class="actions">
+        <%= f.submit  :提交, class: "btn btn-large btn-primary"%>
+      </div>
+    <% end %>
+          
+    </div>
+</div>
+
+

@@ -1,0 +1,11 @@
+
+<section>
+   <table class="table table-striped">
+    <%@olds.each do |old|%>
+	<tr>
+		   <td><strong>·&nbsp;</strong><%= link_to old.title,article_path(old)%></td> 
+	</tr>
+	<%end%>
+   </table>
+</section>
+

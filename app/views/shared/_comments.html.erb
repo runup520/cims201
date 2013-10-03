@@ -1,0 +1,32 @@
+<div>
+            <hr>
+            读者评论:
+            <% @article.comments.each do |comment| %>
+                      
+            <table>
+                <tr>
+                  <td rowspan="2" width="25%"> <img src="../assets/article.png"></td>
+                  <td><p><small>名字:<%=comment.name%></small></p></td>
+                </tr>
+
+                <tr>
+                  <td><p><small>评论时间:<%=comment.created_at%></small></p></td>
+                </tr>
+                <hr>
+
+                <tr>
+                  <td rowspan="2"><p><small>删除</small></p></td>
+                </tr>
+                <hr>
+
+            </table>
+
+
+          
+                     
+              <p><small>
+                <%=raw comment.content %>
+              </small></p>
+
+            <% end %>
+</div>

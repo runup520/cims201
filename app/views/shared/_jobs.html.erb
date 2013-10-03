@@ -1,0 +1,10 @@
+<section>
+<%=link_to "查看更多",job_show_path%>
+<%=l paginate @jobs, :theme => 'twitter-bootstrap' %> 
+<ul>
+	<%@jobs.each do |job|%>
+		<li><%=link_to job.title,article_path(job)%>
+		</li>
+	<%end%>
+</ul>
+</section>

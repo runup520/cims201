@@ -1,0 +1,6 @@
+
+<ol>
+<%@kms.each do |km|%>
+	<li><%=link_to km.title,article_path(km)%></li>
+<%end%>
+</ol>

@@ -1,0 +1,6 @@
+<ol>
+	<%@datas.each do |data|%>
+		<li><%=link_to data.title,article_path(data)%>
+		</li>
+	<%end%>
+</ol>

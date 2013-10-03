@@ -1,0 +1,28 @@
+<style type="text/css">
+  .textbg1{width:30%;}
+</style>
+
+
+ <section>
+            <hr>
+            <%= form_for([@article, @article.comments.build]) do |f| %>
+              
+              <p>      
+                <small>姓名: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</small><%= f.text_field :name ,:class=>'textbg1'%>
+              </p>
+
+              <p>
+                <small>电子邮件:</small><%= f.text_field :email,:class=>'textbg1' %>
+              </p>
+
+              <p>
+               <small>评论内容:</small>
+                <%= f.kindeditor :content, :width => 400, :height => 400, :langType => 'en' %>
+              </p>
+
+              <p>
+                <%= f.submit :评论提交 ,class: "btn btn-large btn-primary"%>
+              </p>
+
+            <% end %>
+</section>	
